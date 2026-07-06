@@ -1,4 +1,4 @@
-name: My first test
+name: first test
 
 on: push
 
@@ -7,4 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: welcom message
-      run : echo "hello frero"
+      run : echo "hello frr"
+
+    - name: list all files
+      run : ls 
+
+    - name: read 
+      run : cat README.md
