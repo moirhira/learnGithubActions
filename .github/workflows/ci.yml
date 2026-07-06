@@ -3,20 +3,20 @@ name: first test
 on: push
 
 jobs:
-  first_job:
+  job_1:
     runs-on: ubuntu-latest
     steps:
-    - name: welcom message
-      run : echo "hello frr"
+    - name: job _1
+      run : echo "hello frr from job 1" >> text.txt 
 
-    - name: list all files before checkout 
-      run : ls 
-
-    - name: checkout the repo
-      uses: actions/checkout@v3
-    
-    - name: list all files and read readme
-      run : |
-        chmod +x ascci-script.sh
-        ./ascci-script.sh
-        
+  job_2:
+    runs-on: ubuntu-latest 
+    steps:
+    - name: job _2
+      run : echo "im the job 2 i add this" >> text.txt 
+  
+  job_3:
+    runs-on: ubuntu-latest
+    steps:
+    - name: job _3
+      run : cat text.txt
