@@ -9,8 +9,11 @@ jobs:
     - name: welcom message
       run : echo "hello frr"
 
-    - name: list all files
+    - name: list all files before checkout 
       run : ls 
+
+    - name: list all files after checkout
+      uses: actions/checkout@v3
 
     - name: read 
       run : cat README.md
