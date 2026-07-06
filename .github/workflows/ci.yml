@@ -1,0 +1,10 @@
+name: My first test
+
+on: push
+
+jobs:
+  first_job:
+    runs-on: ubuntu-latest
+    steps:
+      -name: welcom message
+      run : echo "hello frero"
