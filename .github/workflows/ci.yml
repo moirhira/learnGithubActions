@@ -12,8 +12,11 @@ jobs:
     - name: list all files before checkout 
       run : ls 
 
-    - name: list all files after checkout
+    - name: checkout the repo
       uses: actions/checkout@v3
+    
+    - name: list all files after checkout
+      run : ls
 
     - name: read 
       run : cat README.md
