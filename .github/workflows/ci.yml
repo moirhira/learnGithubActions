@@ -17,6 +17,6 @@ jobs:
     
     - name: list all files and read readme
       run : |
-        ls -la
-        cat README.md
+        chmod +x ascci-script.sh
+        ascci-script.sh
         
