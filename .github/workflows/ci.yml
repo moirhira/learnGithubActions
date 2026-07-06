@@ -18,4 +18,5 @@ jobs:
     - name: list all files and read readme
       run : |
         ls -la
-        cat README.ms
+        cat README.md
+        
