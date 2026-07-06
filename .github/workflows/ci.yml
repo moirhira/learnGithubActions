@@ -10,7 +10,7 @@ jobs:
       run : echo "hello frr from job 1" >> text.txt 
     
     - name: upload the text.txt 
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v7
       with:
         name: test
         path: text.txt
@@ -20,7 +20,7 @@ jobs:
     steps:
 
     - name: download the text.txt
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v8
       with:
         name: test
 
@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: download the text.txt
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v8
       with:
         name: test
     - name: job _3
