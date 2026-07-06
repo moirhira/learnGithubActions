@@ -21,7 +21,8 @@ jobs:
 
     - name: download the text.txt
       uses: actions/download-artifact@v3
-      with: test
+      with:
+        name: test
 
     - name: job _2
       run : echo "im the job 2 i add this" >> text.txt 
@@ -31,6 +32,7 @@ jobs:
     steps:
     - name: download the text.txt
       uses: actions/download-artifact@v3
-      with: test
+      with:
+        name: test
     - name: job _3
       run : cat text.txt
