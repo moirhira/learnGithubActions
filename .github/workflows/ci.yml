@@ -6,5 +6,5 @@ jobs:
   first_job:
     runs-on: ubuntu-latest
     steps:
-      -name: welcom message
+    - name: welcom message
       run : echo "hello frero"
