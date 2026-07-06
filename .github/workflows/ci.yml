@@ -8,15 +8,29 @@ jobs:
     steps:
     - name: job _1
       run : echo "hello frr from job 1" >> text.txt 
+    
+    - name: upload the text.txt 
+      uses: actions/upload-artifact@v3
+      with:
+        name: test
+        path: text.txt
 
   job_2:
     runs-on: ubuntu-latest 
     steps:
+
+    - name: download the text.txt
+      uses: actions/download-artifact@v3
+      with: test
+
     - name: job _2
       run : echo "im the job 2 i add this" >> text.txt 
   
   job_3:
     runs-on: ubuntu-latest
     steps:
+    - name: download the text.txt
+      uses: actions/download-artifact@v3
+      with: test
     - name: job _3
       run : cat text.txt
