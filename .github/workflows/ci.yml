@@ -1,9 +1,13 @@
-name: first test
+name: test matrix
 
 on: push
+
 jobs:
   job_1:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest, ubuntu-20.04, windows-latest]
+    runs-on: ${{matrix.os}}
     steps:
     - name: job _1
       run : echo "hello frr from job 1" >> text.txt 
