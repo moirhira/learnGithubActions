@@ -6,7 +6,7 @@ jobs:
   job_1:
     strategy:
       matrix:
-        os: [ubuntu-latest, ubuntu-20.04, windows-latest]
+        os: [ubuntu-latest]
     runs-on: ${{matrix.os}}
     steps:
     - name: job _1
@@ -20,7 +20,7 @@ jobs:
 
   job_2:
     needs: job_1
-    runs-on: [self hosted, linux]
+    runs-on: [self-hosted, linux]
     timeout-minutes: 1
     steps:
     - name: download the text.txt
